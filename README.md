@@ -32,7 +32,7 @@ function Form({ tags = undefined }) {
         noValidate
       >
         <div className="min-w-0 flex-1">
-          <label for="cta_email" className="sr-only">
+          <label htmlFor="cta_email" className="sr-only">
             Email address
           </label>
           <input
