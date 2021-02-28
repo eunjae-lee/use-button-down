@@ -68,7 +68,7 @@ export function useButtonDown(props: Props) {
         setErrorType('api');
         setErrorPayload(reason);
       });
-  }, [email, fetch]);
+  }, [status, email, tags, apiPath]);
 
   return { email, setEmail, submit, status, errorType, errorPayload };
 }
