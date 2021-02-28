@@ -8,7 +8,7 @@ import { subscribeAPI } from 'use-button-down';
 export default subscribeAPI;
 ```
 
-## 'Form.js'
+## `Form.js`
 
 ```jsx
 function Form({ tags = undefined }) {
