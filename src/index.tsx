@@ -1,2 +1,2 @@
 export { useButtonDown } from './hooks';
-export { subscribe } from './api';
+export { subscribe, subscribeAPI } from './api';

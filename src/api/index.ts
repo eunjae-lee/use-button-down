@@ -1,7 +1,17 @@
 import fetch from 'isomorphic-unfetch';
 
-export async function subscribe(req: any, res: any) {
+type Props = {
+  email: string;
+  tags?: string[];
+};
+
+export async function subscribeAPI(req: any, res: any) {
   const { email, tags } = req.body;
+  const { status, json } = await subscribe({ email, tags });
+  res.status(status).json(json);
+}
+
+export async function subscribe({ email, tags }: Props) {
   const url = 'https://api.buttondown.email/v1/subscribers';
   const response = await fetch(url, {
     method: 'POST',
@@ -10,10 +20,13 @@ export async function subscribe(req: any, res: any) {
       tags,
     }),
     headers: {
-      Authorization: `Token ${process.env.BUTTONDOWN_API}`,
+      Authorization: `Token ${process.env.BUTTONDOWN_API_KEY}`,
       'Content-Type': 'application/json',
     },
   });
   const json = await response.json();
-  res.status(response.status).json(json);
+  return {
+    status: response.status,
+    json,
+  };
 }
