@@ -15,7 +15,7 @@ function isValidEmail(email: string) {
 }
 
 export function useButtonDown(props: Props) {
-  const { apiPath = '/subscribe', tags } = props;
+  const { apiPath = '/api/subscribe', tags } = props;
   const [email, setEmail] = useState<string>('');
   const [status, setStatus] = useState<Status>('idle');
   const [errorType, setErrorType] = useState<ErrorType>();
