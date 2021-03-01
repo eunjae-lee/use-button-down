@@ -2,6 +2,8 @@
 
 ## `api/subscribe.js`
 
+With the following code, you can create an API on Vercel. For other providers like Netlify, import `subscribe` and follow their spec.
+
 ```js
 import { subscribeAPI } from 'use-button-down';
 
@@ -11,6 +13,8 @@ export default subscribeAPI;
 ## `Form.js`
 
 ```jsx
+import { useButtonDown } from 'use-button-down';
+
 function Form({ tags = undefined }) {
   const {
     email,
@@ -88,3 +92,7 @@ function Form({ tags = undefined }) {
   );
 }
 ```
+
+## Next steps
+
+- [ ] Get rid of `isomorphic-fetch` from the dependencies and accept `fetch` as a parameter. This way, we can reduce the bundle size and avoid duplicated implementation.
