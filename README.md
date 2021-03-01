@@ -14,6 +14,20 @@ export default subscribeAPI;
 
 ## `Form.js`
 
+```js
+const {
+  email,        // string
+  setEmail,     // function
+  submit,       // function
+  status,       //
+  errorType,
+  errorPayload,
+} = useButtonDown({ tags, apiPath });
+
+// tags?: string[];
+// apiPath?: string;
+```jsx
+
 Example:
 ```jsx
 import { useButtonDown } from 'use-button-down';
