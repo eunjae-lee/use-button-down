@@ -1,5 +1,13 @@
 # use-button-down
 
+## Installation
+
+```
+npm install use-button-down
+# or
+yarn add use-button-down
+```
+
 ## `api/subscribe.js`
 
 With the following code, you can create an API on Vercel. For other providers like Netlify, import `subscribe` and follow their spec.
@@ -119,3 +127,4 @@ useButtonDown({ apiPath: '...' });
 ## Next steps
 
 - [ ] Get rid of `isomorphic-fetch` from the dependencies and accept `fetch` as a parameter. This way, we can reduce the bundle size and avoid duplicated implementation.
+- [ ] Write more docs?
