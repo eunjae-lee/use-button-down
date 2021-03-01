@@ -26,7 +26,7 @@ const {
 
 // tags?: string[];
 // apiPath?: string;
-```jsx
+```
 
 Example:
 ```jsx
