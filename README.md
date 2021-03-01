@@ -4,6 +4,8 @@
 
 With the following code, you can create an API on Vercel. For other providers like Netlify, import `subscribe` and follow their spec.
 
+This function assumes you have `process.env.BUTTONDOWN_API_KEY`.
+
 ```js
 import { subscribeAPI } from 'use-button-down';
 
