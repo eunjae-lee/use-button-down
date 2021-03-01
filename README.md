@@ -14,6 +14,7 @@ export default subscribeAPI;
 
 ## `Form.js`
 
+Example:
 ```jsx
 import { useButtonDown } from 'use-button-down';
 
