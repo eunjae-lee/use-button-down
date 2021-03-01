@@ -95,6 +95,12 @@ function Form({ tags = undefined }) {
 }
 ```
 
+By default, the hook calls `/api/subscribe` when submitting. You can change the api path like the following:
+
+```js
+useButtonDown({ apiPath: '...' });
+```
+
 ## Next steps
 
 - [ ] Get rid of `isomorphic-fetch` from the dependencies and accept `fetch` as a parameter. This way, we can reduce the bundle size and avoid duplicated implementation.
