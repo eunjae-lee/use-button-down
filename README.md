@@ -19,9 +19,9 @@ const {
   email,        // string
   setEmail,     // function
   submit,       // function
-  status,       //
-  errorType,
-  errorPayload,
+  status,       // 'idle' | 'subscribing' | 'error' | 'subscribed'
+  errorType,    // 'invalid_email' | 'api' | undefined
+  errorPayload, // any
 } = useButtonDown({ tags, apiPath });
 
 // tags?: string[];
